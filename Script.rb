@@ -7,9 +7,14 @@
 #
 #===============================================================================
 #
-# To this script works, put it above main. Put an item into item.txt like:
+# To this script works, put it above main. Put an item into item.txt.
+# In Essentials version 16 or above:
 #
 # 712,BOOSTERPACK,Booster Pack,Booster Packs,1,500,An booster pack for Triple Triad game. Contains 3 cards ,2,0,0,
+#
+# In v15.2 or below:
+#
+# 712,BOOSTERPACK,Booster Pack,1,500,An booster pack for Triple Triad game. Contains 3 cards ,2,0,0,
 #
 # You can set a BOOSTER_LIST lists. So, you can create several types of 
 # packs. For helping in making these lists, this script includes a 
