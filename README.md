@@ -1,8 +1,11 @@
 # Triple Triad Booster Pack
 This script is for Pokémon Essentials. It's a booster pack item for Triple Triad minigame.
 
-## Compatibility
-Doesn't work on Essentials versions newer than v18.1.
+![](Files/BOOSTERPACK.png)
+![](Files/STARTERPACK.png)
+
+## Screens
+![](Screens/gif.gif)
 
 ## Installation
 Follow the [Script](/Script.rb) instructions.
