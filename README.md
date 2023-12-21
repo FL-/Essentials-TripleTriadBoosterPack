@@ -1,5 +1,5 @@
 # Triple Triad Booster Pack
-This script is for Pokémon Essentials. It's a booster pack item for Triple Triad minigame.
+This script is for Pokémon Essentials. It's a booster pack item with predefined sets for Triple Triad minigame.
 
 ![](Files/BOOSTERPACK.png)
 ![](Files/STARTERPACK.png)

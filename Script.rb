@@ -2,8 +2,8 @@
 # * Triple Triad Booster Pack - by FL (Credits will be appreciated)
 #===============================================================================
 #
-# This script is for Pokémon Essentials. It's a booster pack item for 
-# Triple Triad minigame.
+# This script is for Pokémon Essentials. It's a booster pack item with
+# predefined sets for Triple Triad minigame.
 #
 #== INSTALLATION ===============================================================
 #
@@ -76,7 +76,7 @@
 if defined?(PluginManager) && !PluginManager.installed?("Triple Triad Booster Pack")
   PluginManager.register({                                                 
     :name    => "Triple Triad Booster Pack",                                        
-    :version => "1.1",                                                     
+    :version => "1.1.1",                                                     
     :link    => "https://www.pokecommunity.com/showthread.php?t=356231",             
     :credits => "FL"
   })
@@ -153,6 +153,7 @@ module BoosterPack
         Bridge.species_name(card_species))
       )
     end
+    return Bridge.end_item_as_consumed_code
   end
   
   def print_species_array(type)
@@ -175,6 +176,10 @@ module BoosterPack
 
     def message(string)
       return MAJOR_VERSION >= 19 ? pbMessage(string) : Kernel.pbMessage(string)
+    end
+
+    def end_item_as_consumed_code
+      return MAJOR_VERSION >= 20 ? 1 : 3
     end
 
     def give_triad_card(sym, quantity)
@@ -275,10 +280,8 @@ if BoosterPack::MIN_PACK_STOCK>0
 end
 
 ItemHandlers::UseFromBag.add(:BOOSTERPACK,proc{|item|
-  BoosterPack.give(item, 5)
-  next 1
+  next BoosterPack.give(item, 5)
 })
 ItemHandlers::UseFromBag.add(:STARTERPACK,proc{|item|
-  BoosterPack.give(item, 3, 1)
-  next 1
+  next BoosterPack.give(item, 3, 1)
 })
